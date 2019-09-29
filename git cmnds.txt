@@ -1,0 +1,381 @@
+﻿git
+   13  clear
+   14  yum install git
+   15  clear
+   16  git
+   17  clear
+   18  git --version
+   19  clear
+   20  history
+   21  clear
+   22  cd /
+   23  mkdir git-demo
+   24  cd git-demo/
+   25  ls
+   26  mkdir project
+   27  cd project/
+   28  ls
+   29  git init
+   30  ll -al
+   31  ls
+   32  vim index1.html
+   33  git status
+   34  clear
+   35  git add index1.html
+   36  git status
+   37  git commit -m "First commit"
+   38  git config --global user.name "devops"
+   39  git config --global user.email "devops@gmail.com"
+   40  git commit -m "First commit"
+   41  clear
+   42  git status
+   43  vim index2.html
+   44  ls
+   45  git status
+   46  ls
+   47  git ls-files
+   48  git add index2.html
+   49  git status
+   50  git commit -m "second file"
+   51  git status
+   52  ls
+   53  git ls-files
+   54  clear
+   55  history
+   56  clear
+   57  git log
+   58  git log --oneline
+   59  clear
+   60  git log index1.html
+   61  ls
+  14  vim index1.html
+  15  git status
+  16  git commit -a -m "changes added"
+  17  git status
+  18  clear
+  19  git status
+  20  ls
+  21  vim index1.html
+  22  vim file1.txt
+  23  git status
+  24  git add file1.txt
+  25  git commit -m "text file"
+  26  git status
+  27  clear
+  28  git status
+  29  vim file1.txt
+  30  git status
+  31  git diff file1.txt
+  32  git add file1.txt
+  33  git diff file1.txt
+  34  git diff --staged file1.txt
+  35  clear
+  36  vim file1.txt
+  37  git diff file1.txt
+  38  git diff --staged file1.txt
+  39  git status
+  40  git commit -a -m "text file modified"
+  41  git status
+  42  clear
+  43  git log file1.txt
+  44  git show 4f34b77d5
+  45  history
+  46  clear
+  47  ls
+  48  git ls-files
+  49  git rm file1.txt
+  50  ls
+  51  git ls-files
+  52  git status
+  53  git commit -m "del the index file"
+  54  clear
+  55  ls
+  56  git ls-files
+  57  git rm --cached index2.html
+  58  ls
+  59  git ls-files
+  60  git status
+  61  git commit -m "del html file"
+  62  git status
+  63  clear
+  64  ls
+  65  git status
+  66  vim .gitignore
+  67  git status
+  68  clear
+  69  history
+  70  ls
+  71  ll -al
+  72  git status
+  73  git add .gitignore
+  74  git commit -m "added ignore file"
+  75  git status
+  76  clear
+  77  ls
+  78  git ls-files
+  79  cat .gitignore
+  80  ls
+  81  git status
+  82  vim file2.txt
+  83  git status
+  84  git add file2.txt
+  85  git status
+  86  git commit -m "another text file"
+  87  git status
+  88  clear
+  89  git log --oneline
+  90  git revert 8ee0ab3
+  91  git log --oneline
+  92  ls
+  93  ll -al
+  94  history
+  95  git status
+  96  git log --oneline
+  157  git log --oneline
+  158  git reset HEAD~2
+  159  git log --oneline
+  160  clear
+  161  git log --oneline
+  162  git status
+  163  git reset --mixed d3ce9ec
+  164  git log --oneline
+  165  git reset --mixed HEAD~1
+  166  git log --oneline
+  167  git status
+  168  git add .gitignore
+  169  git commit -m "added ignore again"
+  170  clear
+  171  git log --oneline
+  172  git reset --soft HEAD~1
+  173  git log --oneline
+  174  git status
+  175  git commit -m "adding again"
+  176  git status
+  177  clear
+  178  git log --oneline
+  179  git reset --hard HEAD~1
+  180  git log --oneline
+  181  git status
+  182  clear
+  183  git status
+  184  git add index2.html
+  185  git commit -m "last commit"
+  186  git status
+  187  clear
+  188  git status
+  189  ls
+  190  git branch
+  191  gut branch b1 master
+  192  git branch b1 master
+  193  git branch
+  194  git status
+  195  ls
+  196  git log --oneline
+  197  git reset --hard f5478d6
+  198  git log --oneline
+  199  clear
+  200  git log --oneline
+  201  git branch b2 master
+  202  git branch
+  203  git git checkout b2
+  204  git checkout b2
+  205  git status
+  206  ls
+  207  git log --oneline b2
+  208  git log --oneline master
+  209  clear
+  210  ls
+  211  vim index3.html
+  212  git add index3.html
+  213  git commit -m "added new file on b2"
+  214  ls
+  215  git log --oneline b2
+  216  git checkout master
+  217  ls
+  218  git log --oneline master
+  219  git merge b2 master
+  220  ls
+  221  git log --oneline
+  222  git diff b2 master
+  223  clear
+  224  ls
+  225  git diff master b1
+  226  clear
+  227  ls
+  228  vim index4.html
+  229  git add index4.html
+  230  git commit -m "added index4"
+  231  git log --oneline master
+  232  ls
+  233  git checkout b2
+  234  clear
+  235  ls
+  236  vim index4.html
+  237  git add index4.html
+  238  git commit -m "added index4"
+  239  ls
+  240  git log --oneline
+  241  git checkout master
+  242  clear
+  243  ls
+  244  git merge b2 master
+  245  vim index4.html
+  246  git add index4.html
+  247  git commit =m "resolved the conflicts"
+  248  git commit -m "resolved the conflicts"
+  249  git log --oneline
+  250  ls
+  251  git status
+  252  cat index4.html
+  253  history
+  254  clear
+  255  git checkout
+  256  git status
+  257  ls
+  258  git log --oneline
+  259  clear
+  260  vim index1.html
+  261  vim index2.html
+  262  ls
+  263  git status
+  264  history
+  265  clear
+  266  git status
+  267  git stash
+  268  git status
+  269  git stash list
+  270  git show stash@{0}
+  271  clear
+  272  git status
+  273  git stash pop stash@{0}
+  274  git status
+  275  git stash list
+  276  clear
+  277  git status
+  278  git stash
+  279  git status
+  280  git stash list
+  281  git stash apply stash@{0}
+  282  clear
+  283  git status
+  284  git stash list
+  285  clear
+  286  git status
+  287  git stash -p
+  288  clear
+  289  git status
+  290  git stash list
+  291  git stash
+  292  git stash list
+  293  git stash drop ash@{0}: WIP on master: cd8c9c2 resolved the co
+  294  ash@{1}: WIP on master: cd8c9c2 resolved the conflicts
+  295  git stash drop stash@{2}
+  296  git stash list
+  297  clear
+  298  git stash list
+  299  git stash drop stash@{0}
+  300  git stash list
+  301  clear
+  302  git status
+  303  ls
+  304  git branch
+  305  git log --oneline
+  306  git reset --hard f5478d6
+  307  git log --oneline
+  308  clear
+  309  ls
+  310  git branch b4 master
+  311  ls
+  312  git branch
+  313  ls
+  314  vim index3.html
+  315  git add index3.html
+  316  git commit -m "added index"
+  317  git log --oneline
+  318  ls
+  319  clear
+  320  git checkout b4
+  321  ls
+  322  vim index4.html
+  323  git add index4.html
+  324  git commit -m "added index4"
+  325  git log --oneline master
+  326  git log --oneline b4
+  327  git rebase master
+  328  git log --oneline b4
+  338  git remote add origin https://github.com/devops-trainer/repo1.git
+  339  git remote add origin1 https://github.com/devops-trainer/repo2.git
+  340  git push origin master
+  341  git push origin b4
+  342  clear
+  343  git branch
+  344  git branch -d b1
+  345  git branch -D b1
+  346  git branch
+  347  git branch -d b2
+  348  git branch -D b2
+  349  git branch
+  350  git branch -d b4
+  351  git branch -D b4
+  352  git branch
+  353  clear
+  354  git push origin --delete b4
+  355  history
+  356  git remote v
+  357  git remote -v
+  358  history
+  359  clear
+  360  ls
+  361  cd ..
+  362  ls
+  363  mkdir remote-project
+  364  cd remote-project/
+  365  git clone https://github.com/devops-trainer/repo2.git
+  366  ll -al
+  367  cd repo2/
+  368  ll -al
+  369  ls
+  370  clear
+  371  git status
+  372  vim index1/html
+  373  vim index1.html
+  374  git status
+  375  git add index1.html
+  376  git commit -m "first commit"
+  377  git remote -v
+  378  git remote push origin master
+  379  git push origin master
+  380  history
+  381  clear
+  382  cd ..
+  383  ls
+  384  cd ..
+  385  ls
+  386  cd remote-project/
+  387  ls
+  388  cd repo2/
+  389  ls
+  390  git pull origin
+  391  ls
+  392  clear
+  393  ls
+  394  git fetch origin
+  395  ls
+  396  git pull origin
+  397  ls
+  398  git fetch origin
+  399  git status
+  400  ls
+  401  clear
+  402  ls
+  403  vim index4.html
+  404  git status
+  405  git add index4.html
+  406  git commit -m "added html file"
+  407  clear
+  408  git push origin master
+  409  git pull origin master
+  410  vim index4.html
+  411  git add index4.html
+  412  git commit -m "resolved the conflicts"
+  413  git push origin master
